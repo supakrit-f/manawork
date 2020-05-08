@@ -50,6 +50,7 @@ namespace homework9
                 idProduct = Console.ReadLine();
                 for (i = 1; i < SKU.Length; i++)
                 {
+                    int f = 0;
                     if (idProduct == SKU[i])
                     {
                         j++;
@@ -57,7 +58,10 @@ namespace homework9
                         total = total + int.Parse(price[i]);
                     }                  
                 }
-               
+                if (f != 2)
+                    {
+                        Console.WriteLine("not found");
+                    }
                 Console.WriteLine("Product in your cart are");
                 foreach(var item in productList){
                     Console.WriteLine(item);
